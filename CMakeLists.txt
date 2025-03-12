@@ -8,5 +8,5 @@ ${CMAKE_CURRENT_SOURCE_DIR}/src/lsp_client.cpp)
 # 添加包含目录
 target_include_directories(client PRIVATE 
     ${CMAKE_CURRENT_SOURCE_DIR}/src
-    ${CMAKE_CURRENT_SOURCE_DIR}/include  # 如果有额外的include目录
+    ${CMAKE_CURRENT_SOURCE_DIR}/include  
 )
