@@ -18,6 +18,9 @@ public:
     // 发送请求
     json sendRequest(const std::string& method, const json& params);
     
+    // 读取响应
+    json readResponse();
+
     // 发送通知
     void sendNotification(const std::string& method, const json& params);
     
@@ -27,6 +30,28 @@ public:
     // 获取诊断信息
     std::vector<json> getDiagnostics(const std::string& uri);
     
+     
+    // 文档变更通知
+    void documentDidChange(const std::string& uri, const std::string& newContent, int version);
+    
+    // 代码补全请求
+    json requestCompletion(const std::string& uri, int line, int character);
+    
+    // 转到定义请求
+    json requestDefinition(const std::string& uri, int line, int character);
+    
+    // 保存文档通知
+    void documentDidSave(const std::string& uri);
+    
+    // 非阻塞方式读取服务器消息，超时返回空对象
+    json readMessage(int timeoutMs = 0);
+    
+    // 更新诊断信息
+    void updateDiagnostics(const std::string& uri, const json& diagnosticsData);
+    
+    // 发送请求源名称
+    json requestSourceName();
+
     // 关闭连接
     void shutdown();
 

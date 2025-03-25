@@ -3,7 +3,9 @@ project(LSP-Client)
 
 add_executable(client 
 ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp 
-${CMAKE_CURRENT_SOURCE_DIR}/src/lsp_client.cpp)
+${CMAKE_CURRENT_SOURCE_DIR}/src/file_utils.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/src/lsp_client.cpp
+)
 
 # 添加包含目录
 target_include_directories(client PRIVATE 

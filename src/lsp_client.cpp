@@ -1,4 +1,5 @@
 #include "lsp_client.h"
+#include "file_utils.h"
 #include <iostream>
 #include <sstream>
 #include <cstdio>
@@ -123,25 +124,72 @@ bool LSPClient::initialize(const std::string& serverPath) {
         return false;
     }
 
+    // 打开一个Java文件进行分析
+    std::string filePath = "/mnt/d/Course/Year4/QLextension/DemoProject-master/src/main/java/tutorial1/Main.java";
+    std::string srcPath = "/mnt/d/Course/Year4/QLextension/DemoProject-master/src/main/java";
+    std::string rootPath = "/mnt/d/Course/Year4/QLextension/DemoProject-master";
+    
+    // 使用标准URI转换
+    std::string fileUri = FileUtils::pathToUri(filePath);
+    std::string rootUri = FileUtils::pathToUri(rootPath);
+
     // 发送初始化请求
     json initParams = {
-        {"processId", 
-#ifdef _WIN32
-            GetCurrentProcessId()
-#else
-            getpid()
-#endif
-        },
-        {"rootUri", nullptr},  // 将 rootUri 设置为 null，让服务器自行决定
+        {"processId", ::getpid()},
+        {"clientInfo", {
+            {"name", "C++ Client"},
+            {"version", "1.0"}
+        }},
+        {"rootUri", rootUri},
+        {"workspaceFolders", json::array({
+            {{"uri", rootUri}, {"name", "DemoProject"}}
+        })},
         {"capabilities", {
+            {"workspace", {
+                {"configuration", true},
+                {"workspaceFolders", true},
+                // 修改这里：didChangeConfiguration应该是一个对象，而不是简单值
+                {"didChangeConfiguration", {
+                    {"dynamicRegistration", true}
+                }}
+            }},
             {"textDocument", {
-                {"publishDiagnostics", {{"relatedInformation", true}}},
-                {"synchronization", {{"didSave", true}}}
+                {"synchronization", {
+                    {"didSave", true},
+                    {"dynamicRegistration", true}
+                }},
+                {"diagnostics", {"relatedInformation", true}}
+            }}
+        }},
+        // 其他参数保持不变
+        {"initializationOptions", {
+            {"java", {
+                {"sourcePaths", json::array({FileUtils::pathToUri(srcPath)})},
+                {"project", {
+                    {"type", "maven"},
+                    {"buildFile", FileUtils::pathToUri(rootPath + "/pom.xml")}
+                }},
+                {"analysis", {
+                    {"mavenHome", "/home/user/.m2"},
+                    {"dependencyResolution", {
+                        {"mode", "hybrid"}
+                    }}
+                }}
             }}
         }}
     };
 
+    // 发送初始化请求并等待响应
     json response = sendRequest("initialize", initParams);
+    
+    // 检查响应是否有效
+    if (response.empty() || (response.contains("error") && !response["error"].is_null())) {
+        std::cerr << "初始化失败: " << response.dump(2) << std::endl;
+        return false;
+    }
+    
+    // 等待一小段时间再发送initialized通知
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
     
     // 发送initialized通知
     sendNotification("initialized", json::object());
@@ -163,11 +211,48 @@ json LSPClient::sendRequest(const std::string& method, const json& params) {
     fwrite(message.c_str(), 1, message.length(), serverOut);
     fflush(serverOut);
     
-    // 这里应该实现等待响应的逻辑
-    // 简化版本，实际应用中需要更复杂的处理
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    // 读取服务器响应
+    json response = readResponse();
     
-    return json::object(); // 返回空对象，实际应该返回服务器响应
+    // 如果是不支持的方法，尝试从通知中获取信息
+    if (method == "source" && response.empty()) {
+        // 再次读取一次，可能有通知消息
+        response = readResponse();
+    }
+    
+    return response;
+}
+
+json LSPClient::readResponse() {
+    char header[1024];
+    int contentLength = -1;
+    
+    // 读取头部，查找 Content-Length
+    while (fgets(header, sizeof(header), serverIn)) {
+        if (strncmp(header, "Content-Length: ", 16) == 0) {
+            contentLength = atoi(header + 16);
+        } else if (strcmp(header, "\r\n") == 0) {
+            // 头部结束
+            break;
+        }
+    }
+    
+    if (contentLength <= 0) {
+        std::cerr << "无效的 Content-Length 或未找到" << std::endl;
+        return json::object();
+    }
+    
+    // 读取消息内容
+    std::vector<char> buffer(contentLength + 1);
+    size_t bytesRead = fread(buffer.data(), 1, contentLength, serverIn);
+    buffer[bytesRead] = '\0';
+    
+    try {
+        return json::parse(buffer.data());
+    } catch (const std::exception& e) {
+        std::cerr << "解析响应失败: " << e.what() << std::endl;
+        return json::object();
+    }
 }
 
 void LSPClient::sendNotification(const std::string& method, const json& params) {
@@ -226,3 +311,84 @@ void LSPClient::shutdown() {
         serverOut = nullptr;
     }
 }
+
+void LSPClient::documentDidChange(const std::string& uri, const std::string& newContent, int version) {
+    json params = {
+        {"textDocument", {
+            {"uri", uri},
+            {"version", version}
+        }},
+        {"contentChanges", {{
+            {"text", newContent}
+        }}}
+    };
+    sendNotification("textDocument/didChange", params);
+}
+
+json LSPClient::requestCompletion(const std::string& uri, int line, int character) {
+    json params = {
+        {"textDocument", {{"uri", uri}}},
+        {"position", {
+            {"line", line},
+            {"character", character}
+        }}
+    };
+    return sendRequest("textDocument/completion", params);
+}
+
+json LSPClient::requestDefinition(const std::string& uri, int line, int character) {
+    json params = {
+        {"textDocument", {{"uri", uri}}},
+        {"position", {
+            {"line", line},
+            {"character", character}
+        }}
+    };
+    return sendRequest("textDocument/definition", params);
+}
+
+void LSPClient::documentDidSave(const std::string& uri) {
+    json params = {
+        {"textDocument", {
+            {"uri", uri}
+        }}
+    };
+    sendNotification("textDocument/didSave", params);
+}
+
+json LSPClient::readMessage(int timeoutMs) {
+    // 检查是否有数据可读
+    fd_set readSet;
+    FD_ZERO(&readSet);
+    
+    int fd = fileno(serverIn);
+    FD_SET(fd, &readSet);
+    
+    struct timeval timeout;
+    timeout.tv_sec = timeoutMs / 1000;
+    timeout.tv_usec = (timeoutMs % 1000) * 1000;
+    
+    int result = select(fd + 1, &readSet, NULL, NULL, &timeout);
+    
+    if (result > 0) {
+        // 有数据可读
+        return readResponse();
+    }
+    
+    // 超时或错误
+    return json::object();
+}
+
+void LSPClient::updateDiagnostics(const std::string& uri, const json& diagnosticsData) {
+    diagnostics[uri] = diagnosticsData;
+}
+
+
+json LSPClient::requestSourceName() {
+    // 不直接请求source方法，而是使用一个自定义方法来获取通知
+    json params = {
+        {"command", "getSourceName"}
+    };
+    return sendRequest("workspace/executeCommand", params);
+}
+
