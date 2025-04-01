@@ -1,3 +1,0 @@
-INDEX VERSION 1.134
-file:/D:/Course/Year4/QLextension/cpp-lsp-client/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index
-meta_index

@@ -1,2 +1,0 @@
-contentTypeToLSPLauch=org.eclipse.lsp4e.test.content-type2\:org.eclipse.ui.externaltools.ProgramLaunchConfigurationType/Mock external LS/run,org.eclipse.jdt.core.javaSource\:org.eclipse.ui.externaltools.ProgramLaunchConfigurationType/cryptoLSP/run
-eclipse.preferences.version=1
