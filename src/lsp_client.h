@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <atomic>
 #include <nlohmann/json.hpp>
 
 using json = nlohmann::json;
@@ -11,6 +12,9 @@ class LSPClient {
 public:
     LSPClient();
     ~LSPClient();
+
+    // 连接到服务器
+    bool connectToServer(const std::string& host, int port);
 
     // 初始化连接
     bool initialize(const std::string& serverPath);
@@ -21,6 +25,9 @@ public:
     // 读取响应
     json readResponse();
 
+    // 执行命令
+    json executeCommand(const std::string& command);
+    
     // 发送通知
     void sendNotification(const std::string& method, const json& params);
     
@@ -52,9 +59,16 @@ public:
     // 发送请求源名称
     json requestSourceName();
 
+    // 处理服务器消息
+    void processServerMessages(int timeoutMs);
+    
+    // 启动消息监听线程
+    void startMessageListener();
+
     // 关闭连接
     void shutdown();
 
+    void startHeartbeat();
 private:
     // 处理服务器响应
     void handleResponse();
@@ -65,6 +79,9 @@ private:
     
     // 请求ID
     int requestId;
+    
+    // 消息监听线程
+    std::atomic<bool> isRunning; 
     
     // 存储诊断信息
     std::unordered_map<std::string, std::vector<json>> diagnostics;

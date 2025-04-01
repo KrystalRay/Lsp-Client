@@ -1,5 +1,5 @@
 # LSP-Client 使用说明
-
+# 注意 该项目仍在建设中
 ## 项目简介
 
 LSP-Client 是一个基于 C++ 实现的 Language Server Protocol (LSP) 客户端，专为与 Java 语言服务器通信而设计。该客户端能够连接到 MagpieBridge 服务器，并通过 LSP 协议进行代码分析和诊断。

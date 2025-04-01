@@ -1,0 +1,12 @@
+INDEX VERSION 1.134+D:\Course\Year4\QLextension\cpp-lsp-client\.metadata\.plugins\org.eclipse.jdt.core
+1332900339.index
+2772897092.index
+1403091259.index
+928674064.index
+2279765431.index
+1744183542.index
+1696940943.index
+1865797976.index
+1801594084.index
+1630265427.index
+632515186.index

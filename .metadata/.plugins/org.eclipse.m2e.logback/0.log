@@ -1,0 +1,345 @@
+2025-03-26 12:11:01,227 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is not available. Remote download required.
+2025-03-26 12:15:41,561 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-26 12:15:41,833 [Worker-21: Auto share git projects] WARN  org.eclipse.jgit.util.FS - Cannot run program "\usr\bin\git" (in directory "\usr\bin"): CreateProcess error=2, 系统找不到指定的文件。
+2025-03-26 12:15:43,354 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.2/maven-war-plugin-3.2.2.jar
+2025-03-26 12:15:43,587 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.2/maven-war-plugin-3.2.2.jar
+2025-03-26 12:15:44,477 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: magpiebridge:crypto-lsp-demo:0.0.1-SNAPSHOT @ D:\Course\Year4\QLextension\CryptoLSPDemo\pom.xml.
+2025-03-26 12:15:45,599 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom
+2025-03-26 12:15:46,201 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom
+2025-03-26 12:15:46,375 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom
+2025-03-26 12:15:46,381 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom
+2025-03-26 12:15:47,079 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom
+2025-03-26 12:15:47,085 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom
+2025-03-26 12:15:47,260 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom
+2025-03-26 12:15:47,266 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom
+2025-03-26 12:15:47,960 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25.pom
+2025-03-26 12:15:47,965 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25.pom
+2025-03-26 12:15:48,142 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25.pom
+2025-03-26 12:15:48,147 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25.pom
+2025-03-26 12:15:48,838 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/magpiebridge/magpiebridge/0.0.6/magpiebridge-0.0.6.pom
+2025-03-26 12:15:48,844 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/magpiebridge/magpiebridge/0.0.6/magpiebridge-0.0.6.pom
+2025-03-26 12:15:49,284 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/magpiebridge/magpiebridge/0.0.6/magpiebridge-0.0.6.pom
+2025-03-26 12:15:49,962 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/magpiebridge/irconverter/0.1.2/irconverter-0.1.2.pom
+2025-03-26 12:15:49,968 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/magpiebridge/irconverter/0.1.2/irconverter-0.1.2.pom
+2025-03-26 12:15:50,763 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/magpiebridge/irconverter/0.1.2/irconverter-0.1.2.pom
+2025-03-26 12:15:51,437 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/com/google/code/gson/gson/2.8.5/gson-2.8.5.pom
+2025-03-26 12:15:51,443 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/com/google/code/gson/gson/2.8.5/gson-2.8.5.pom
+2025-03-26 12:15:51,633 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.5/gson-2.8.5.pom
+2025-03-26 12:15:51,639 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.5/gson-2.8.5.pom
+2025-03-26 12:15:52,325 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/com/google/code/gson/gson-parent/2.8.5/gson-parent-2.8.5.pom
+2025-03-26 12:15:52,331 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/com/google/code/gson/gson-parent/2.8.5/gson-parent-2.8.5.pom
+2025-03-26 12:15:52,523 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.8.5/gson-parent-2.8.5.pom
+2025-03-26 12:15:52,528 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.8.5/gson-parent-2.8.5.pom
+2025-03-26 12:15:53,223 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/de/fraunhofer/iem/CryptoAnalysis/2.1.1/CryptoAnalysis-2.1.1.pom
+2025-03-26 12:15:53,228 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/de/fraunhofer/iem/CryptoAnalysis/2.1.1/CryptoAnalysis-2.1.1.pom
+2025-03-26 12:15:53,691 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/de/fraunhofer/iem/CryptoAnalysis/2.1.1/CryptoAnalysis-2.1.1.pom
+2025-03-26 12:15:54,395 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/de/tud/sse/soot-infoflow/2.7.1/soot-infoflow-2.7.1.pom
+2025-03-26 12:15:54,401 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/de/tud/sse/soot-infoflow/2.7.1/soot-infoflow-2.7.1.pom
+2025-03-26 12:15:54,774 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/de/tud/sse/soot-infoflow/2.7.1/soot-infoflow-2.7.1.pom
+2025-03-26 12:15:54,848 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/de/tud/sse/soot-infoflow/2.7.1/soot-infoflow-2.7.1.pom
+2025-03-26 12:15:54,868 [DefaultMetadataResolver-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/de/upb/cs/swt/heros/1.1.0-SNAPSHOT/maven-metadata.xml
+2025-03-26 12:15:55,539 [DefaultMetadataResolver-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/de/upb/cs/swt/heros/1.1.0-SNAPSHOT/maven-metadata.xml
+2025-03-26 12:15:55,953 [DefaultMetadataResolver-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://oss.sonatype.org/content/repositories/snapshots/de/upb/cs/swt/heros/1.1.0-SNAPSHOT/maven-metadata.xml
+2025-03-26 12:15:55,961 [Worker-39: Update Maven projects configuration] WARN  o.e.m.c.i.embedder.EclipseLogger - Could not transfer metadata de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml from/to github (https://maven.pkg.github.com/MagpieBridge/MagpieBridge): status code: 401, reason phrase: Unauthorized (401)
+2025-03-26 12:15:55,963 [Worker-39: Update Maven projects configuration] WARN  o.e.m.c.i.embedder.EclipseLogger - Could not transfer metadata de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml from/to soot-snapshot (https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/): soot-build.cs.uni-paderborn.de
+2025-03-26 12:15:55,968 [Worker-39: Update Maven projects configuration] WARN  o.e.m.c.i.embedder.EclipseLogger - de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml failed to transfer from https://maven.pkg.github.com/MagpieBridge/MagpieBridge during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of github has elapsed or updates are forced. Original error: Could not transfer metadata de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml from/to github (https://maven.pkg.github.com/MagpieBridge/MagpieBridge): status code: 401, reason phrase: Unauthorized (401)
+2025-03-26 12:15:55,971 [Worker-39: Update Maven projects configuration] WARN  o.e.m.c.i.embedder.EclipseLogger - de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml failed to transfer from https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of soot-snapshot has elapsed or updates are forced. Original error: Could not transfer metadata de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml from/to soot-snapshot (https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/): soot-build.cs.uni-paderborn.de
+2025-03-26 12:15:56,648 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/de/upb/cs/swt/heros/1.1.0-SNAPSHOT/heros-1.1.0-SNAPSHOT.pom
+2025-03-26 12:15:56,659 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/de/upb/cs/swt/heros/1.1.0-SNAPSHOT/heros-1.1.0-SNAPSHOT.pom
+2025-03-26 12:15:56,950 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://oss.sonatype.org/content/repositories/snapshots/de/upb/cs/swt/heros/1.1.0-SNAPSHOT/heros-1.1.0-SNAPSHOT.pom
+2025-03-26 12:15:56,960 [DefaultMetadataResolver-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/ca/mcgill/sable/jasmin/3.0.1-SNAPSHOT/maven-metadata.xml
+2025-03-26 12:15:57,223 [DefaultMetadataResolver-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://oss.sonatype.org/content/repositories/snapshots/ca/mcgill/sable/jasmin/3.0.1-SNAPSHOT/maven-metadata.xml
+2025-03-26 12:15:57,632 [DefaultMetadataResolver-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/ca/mcgill/sable/jasmin/3.0.1-SNAPSHOT/maven-metadata.xml
+2025-03-26 12:15:57,640 [Worker-39: Update Maven projects configuration] WARN  o.e.m.c.i.embedder.EclipseLogger - Could not transfer metadata ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml from/to github (https://maven.pkg.github.com/MagpieBridge/MagpieBridge): status code: 401, reason phrase: Unauthorized (401)
+2025-03-26 12:15:57,641 [Worker-39: Update Maven projects configuration] WARN  o.e.m.c.i.embedder.EclipseLogger - Could not transfer metadata ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml from/to soot-snapshot (https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/): soot-build.cs.uni-paderborn.de
+2025-03-26 12:15:57,644 [Worker-39: Update Maven projects configuration] WARN  o.e.m.c.i.embedder.EclipseLogger - ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml failed to transfer from https://maven.pkg.github.com/MagpieBridge/MagpieBridge during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of github has elapsed or updates are forced. Original error: Could not transfer metadata ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml from/to github (https://maven.pkg.github.com/MagpieBridge/MagpieBridge): status code: 401, reason phrase: Unauthorized (401)
+2025-03-26 12:15:57,646 [Worker-39: Update Maven projects configuration] WARN  o.e.m.c.i.embedder.EclipseLogger - ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml failed to transfer from https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of soot-snapshot has elapsed or updates are forced. Original error: Could not transfer metadata ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml from/to soot-snapshot (https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/): soot-build.cs.uni-paderborn.de
+2025-03-26 12:15:58,350 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/ca/mcgill/sable/jasmin/3.0.1-SNAPSHOT/jasmin-3.0.1-SNAPSHOT.pom
+2025-03-26 12:15:58,356 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/ca/mcgill/sable/jasmin/3.0.1-SNAPSHOT/jasmin-3.0.1-SNAPSHOT.pom
+2025-03-26 12:15:58,630 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://oss.sonatype.org/content/repositories/snapshots/ca/mcgill/sable/jasmin/3.0.1-SNAPSHOT/jasmin-3.0.1-SNAPSHOT.pom
+2025-03-26 12:15:59,312 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/ca/mcgill/sable/soot/3.2.0/soot-3.2.0.pom
+2025-03-26 12:15:59,318 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/ca/mcgill/sable/soot/3.2.0/soot-3.2.0.pom
+2025-03-26 12:15:59,746 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/ca/mcgill/sable/soot/3.2.0/soot-3.2.0.pom
+2025-03-26 12:15:59,763 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/ca/mcgill/sable/soot/3.2.0/soot-3.2.0.pom
+2025-03-26 12:16:00,504 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/pxb/android/axml/2.0.0/axml-2.0.0.pom
+2025-03-26 12:16:00,510 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/pxb/android/axml/2.0.0/axml-2.0.0.pom
+2025-03-26 12:16:00,917 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/pxb/android/axml/2.0.0/axml-2.0.0.pom
+2025-03-26 12:16:00,923 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-release/pxb/android/axml/2.0.0/axml-2.0.0.pom
+2025-03-26 12:16:01,612 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/heros/heros/1.1.0/heros-1.1.0.pom
+2025-03-26 12:16:01,617 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/heros/heros/1.1.0/heros-1.1.0.pom
+2025-03-26 12:16:01,999 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/heros/heros/1.1.0/heros-1.1.0.pom
+2025-03-26 12:16:02,004 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-release/heros/heros/1.1.0/heros-1.1.0.pom
+2025-03-26 12:16:02,696 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.pom
+2025-03-26 12:16:02,701 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.pom
+2025-03-26 12:16:02,850 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.pom
+2025-03-26 12:16:02,854 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3.pom
+2025-03-26 12:16:03,541 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/de/tud/sse/soot-infoflow-android/2.7.1/soot-infoflow-android-2.7.1.pom
+2025-03-26 12:16:03,547 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/de/tud/sse/soot-infoflow-android/2.7.1/soot-infoflow-android-2.7.1.pom
+2025-03-26 12:16:03,945 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/de/tud/sse/soot-infoflow-android/2.7.1/soot-infoflow-android-2.7.1.pom
+2025-03-26 12:16:06,756 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar
+2025-03-26 12:16:06,770 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar
+2025-03-26 12:16:06,801 [Worker-39: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CryptoLSPDemo/src/main/java
+2025-03-26 12:16:06,808 [Worker-39: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /CryptoLSPDemo/src/main/resources
+2025-03-26 12:16:06,829 [Worker-39: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /CryptoLSPDemo/src/test/java
+2025-03-26 12:16:06,832 [Worker-39: Update Maven projects configuration] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /CryptoLSPDemo/src/test/resources
+2025-03-26 12:16:07,263 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar
+2025-03-26 12:16:07,460 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar
+2025-03-26 12:16:07,473 [Worker-23: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.slf4j:slf4j-api:1.7.25
+2025-03-26 12:16:08,279 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Course\Year4\QLextension\CryptoLSPDemo\src\main\resources
+2025-03-26 12:16:08,322 [Worker-42: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 98 resources from src\test\resources to target\test-classes
+2025-03-26 12:16:08,413 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25-sources.jar
+2025-03-26 12:16:08,423 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25-sources.jar
+2025-03-26 12:16:09,181 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25-sources.jar
+2025-03-26 12:16:09,195 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/slf4j/slf4j-simple/1.7.25/slf4j-simple-1.7.25-sources.jar
+2025-03-26 12:16:09,206 [Worker-23: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.slf4j:slf4j-simple:1.7.25
+2025-03-26 12:16:09,929 [Worker-39: Update Maven projects configuration] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 23.00 sec, update config takes 5.00 sec 
+2025-03-26 12:16:10,128 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/magpiebridge/magpiebridge/0.0.6/magpiebridge-0.0.6-sources.jar
+2025-03-26 12:16:10,139 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/magpiebridge/magpiebridge/0.0.6/magpiebridge-0.0.6-sources.jar
+2025-03-26 12:16:10,835 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/magpiebridge/magpiebridge/0.0.6/magpiebridge-0.0.6-sources.jar
+2025-03-26 12:16:10,840 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for magpiebridge:magpiebridge:0.0.6
+org.eclipse.core.runtime.CoreException: Could not resolve artifact magpiebridge:magpiebridge:jar:sources:0.0.6
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 12:16:11,781 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/magpiebridge/irconverter/0.1.2/irconverter-0.1.2-sources.jar
+2025-03-26 12:16:11,787 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/magpiebridge/irconverter/0.1.2/irconverter-0.1.2-sources.jar
+2025-03-26 12:16:12,556 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/magpiebridge/irconverter/0.1.2/irconverter-0.1.2-sources.jar
+2025-03-26 12:16:12,562 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for magpiebridge:irconverter:0.1.2
+org.eclipse.core.runtime.CoreException: Could not resolve artifact magpiebridge:irconverter:jar:sources:0.1.2
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 12:16:13,508 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar
+2025-03-26 12:16:13,515 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar
+2025-03-26 12:16:13,998 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar
+2025-03-26 12:16:14,583 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.8.5/gson-2.8.5-sources.jar
+2025-03-26 12:16:14,588 [Worker-23: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.google.code.gson:gson:2.8.5
+2025-03-26 12:16:15,559 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/de/fraunhofer/iem/CryptoAnalysis/2.1.1/CryptoAnalysis-2.1.1-sources.jar
+2025-03-26 12:16:15,566 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/de/fraunhofer/iem/CryptoAnalysis/2.1.1/CryptoAnalysis-2.1.1-sources.jar
+2025-03-26 12:16:16,542 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/de/fraunhofer/iem/CryptoAnalysis/2.1.1/CryptoAnalysis-2.1.1-sources.jar
+2025-03-26 12:16:16,546 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for de.fraunhofer.iem:CryptoAnalysis:2.1.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact de.fraunhofer.iem:CryptoAnalysis:jar:sources:2.1.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 12:16:17,476 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/de/tud/sse/soot-infoflow/2.7.1/soot-infoflow-2.7.1-sources.jar
+2025-03-26 12:16:17,486 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/de/tud/sse/soot-infoflow/2.7.1/soot-infoflow-2.7.1-sources.jar
+2025-03-26 12:16:18,225 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/de/tud/sse/soot-infoflow/2.7.1/soot-infoflow-2.7.1-sources.jar
+2025-03-26 12:16:19,035 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/de/tud/sse/soot-infoflow/2.7.1/soot-infoflow-2.7.1-sources.jar
+2025-03-26 12:16:19,043 [Worker-23: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for de.tud.sse:soot-infoflow:2.7.1
+2025-03-26 12:16:19,050 [Worker-23: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml failed to transfer from https://maven.pkg.github.com/MagpieBridge/MagpieBridge during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of github has elapsed or updates are forced. Original error: Could not transfer metadata de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml from/to github (https://maven.pkg.github.com/MagpieBridge/MagpieBridge): status code: 401, reason phrase: Unauthorized (401)
+2025-03-26 12:16:19,054 [Worker-23: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml failed to transfer from https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of soot-snapshot has elapsed or updates are forced. Original error: Could not transfer metadata de.upb.cs.swt:heros:1.1.0-SNAPSHOT/maven-metadata.xml from/to soot-snapshot (https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/): soot-build.cs.uni-paderborn.de
+2025-03-26 12:16:19,974 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/de/upb/cs/swt/heros/1.1.0-SNAPSHOT/heros-1.1.0-SNAPSHOT-sources.jar
+2025-03-26 12:16:19,980 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/de/upb/cs/swt/heros/1.1.0-SNAPSHOT/heros-1.1.0-SNAPSHOT-sources.jar
+2025-03-26 12:16:19,984 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for de.upb.cs.swt:heros:1.1.0-SNAPSHOT
+org.eclipse.core.runtime.CoreException: Could not resolve artifact de.upb.cs.swt:heros:jar:sources:1.1.0-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 12:16:19,990 [Worker-23: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml failed to transfer from https://maven.pkg.github.com/MagpieBridge/MagpieBridge during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of github has elapsed or updates are forced. Original error: Could not transfer metadata ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml from/to github (https://maven.pkg.github.com/MagpieBridge/MagpieBridge): status code: 401, reason phrase: Unauthorized (401)
+2025-03-26 12:16:19,993 [Worker-23: Download sources and javadoc] WARN  o.e.m.c.i.embedder.EclipseLogger - ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml failed to transfer from https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of soot-snapshot has elapsed or updates are forced. Original error: Could not transfer metadata ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT/maven-metadata.xml from/to soot-snapshot (https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/): soot-build.cs.uni-paderborn.de
+2025-03-26 12:16:20,910 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/ca/mcgill/sable/jasmin/3.0.1-SNAPSHOT/jasmin-3.0.1-SNAPSHOT-sources.jar
+2025-03-26 12:16:20,917 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/ca/mcgill/sable/jasmin/3.0.1-SNAPSHOT/jasmin-3.0.1-SNAPSHOT-sources.jar
+2025-03-26 12:16:20,920 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for ca.mcgill.sable:jasmin:3.0.1-SNAPSHOT
+org.eclipse.core.runtime.CoreException: Could not resolve artifact ca.mcgill.sable:jasmin:jar:sources:3.0.1-SNAPSHOT
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 12:16:21,855 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/ca/mcgill/sable/soot/3.2.0/soot-3.2.0-sources.jar
+2025-03-26 12:16:21,860 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/ca/mcgill/sable/soot/3.2.0/soot-3.2.0-sources.jar
+2025-03-26 12:16:23,267 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/ca/mcgill/sable/soot/3.2.0/soot-3.2.0-sources.jar
+2025-03-26 12:16:26,650 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/ca/mcgill/sable/soot/3.2.0/soot-3.2.0-sources.jar
+2025-03-26 12:16:26,655 [Worker-23: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for ca.mcgill.sable:soot:3.2.0
+2025-03-26 12:16:27,552 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/commons-io/commons-io/2.6/commons-io-2.6-sources.jar
+2025-03-26 12:16:27,564 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/commons-io/commons-io/2.6/commons-io-2.6-sources.jar
+2025-03-26 12:16:28,125 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6-sources.jar
+2025-03-26 12:16:28,981 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6-sources.jar
+2025-03-26 12:16:28,986 [Worker-23: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for commons-io:commons-io:2.6
+2025-03-26 12:16:29,911 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/org/smali/dexlib2/2.2.5/dexlib2-2.2.5-sources.jar
+2025-03-26 12:16:29,915 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/org/smali/dexlib2/2.2.5/dexlib2-2.2.5-sources.jar
+2025-03-26 12:16:30,795 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/smali/dexlib2/2.2.5/dexlib2-2.2.5-sources.jar
+2025-03-26 12:16:36,711 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/smali/dexlib2/2.2.5/dexlib2-2.2.5-sources.jar
+2025-03-26 12:16:36,715 [Worker-23: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.smali:dexlib2:2.2.5
+2025-03-26 12:16:36,723 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9-sources.jar
+2025-03-26 12:16:36,728 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for com.google.code.findbugs:jsr305:1.3.9
+org.eclipse.core.runtime.CoreException: Could not resolve artifact com.google.code.findbugs:jsr305:jar:sources:1.3.9
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 12:16:36,736 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/xmlpull/xmlpull/1.1.3.4d_b4_min/xmlpull-1.1.3.4d_b4_min-sources.jar
+2025-03-26 12:16:36,740 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for xmlpull:xmlpull:1.1.3.4d_b4_min
+org.eclipse.core.runtime.CoreException: Could not resolve artifact xmlpull:xmlpull:jar:sources:1.1.3.4d_b4_min
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 12:16:37,751 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/pxb/android/axml/2.0.0/axml-2.0.0-sources.jar
+2025-03-26 12:16:37,759 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/pxb/android/axml/2.0.0/axml-2.0.0-sources.jar
+2025-03-26 12:16:39,503 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/pxb/android/axml/2.0.0/axml-2.0.0-sources.jar
+2025-03-26 12:16:39,506 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for pxb.android:axml:2.0.0
+org.eclipse.core.runtime.CoreException: Could not resolve artifact pxb.android:axml:jar:sources:2.0.0
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 12:16:40,425 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/heros/heros/1.1.0/heros-1.1.0-sources.jar
+2025-03-26 12:16:40,430 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/heros/heros/1.1.0/heros-1.1.0-sources.jar
+2025-03-26 12:16:41,133 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/heros/heros/1.1.0/heros-1.1.0-sources.jar
+2025-03-26 12:16:41,137 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for heros:heros:1.1.0
+org.eclipse.core.runtime.CoreException: Could not resolve artifact heros:heros:jar:sources:1.1.0
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 12:16:42,074 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3-sources.jar
+2025-03-26 12:16:42,080 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3-sources.jar
+2025-03-26 12:16:42,536 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3-sources.jar
+2025-03-26 12:16:57,575 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/net/sf/trove4j/trove4j/3.0.3/trove4j-3.0.3-sources.jar
+2025-03-26 12:16:57,580 [Worker-23: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for net.sf.trove4j:trove4j:3.0.3
+2025-03-26 12:16:58,548 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://maven.pkg.github.com/MagpieBridge/MagpieBridge/de/tud/sse/soot-infoflow-android/2.7.1/soot-infoflow-android-2.7.1-sources.jar
+2025-03-26 12:16:58,555 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://soot-build.cs.uni-paderborn.de/nexus/repository/soot-snapshot/de/tud/sse/soot-infoflow-android/2.7.1/soot-infoflow-android-2.7.1-sources.jar
+2025-03-26 12:16:59,290 [Worker-23: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/de/tud/sse/soot-infoflow-android/2.7.1/soot-infoflow-android-2.7.1-sources.jar
+2025-03-26 12:16:59,293 [Worker-23: Download sources and javadoc] ERROR o.e.m.j.internal.DownloadSourcesJob - Could not download sources for de.tud.sse:soot-infoflow-android:2.7.1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact de.tud.sse:soot-infoflow-android:jar:sources:2.7.1
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$7(MavenImpl.java:540)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:292)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:509)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:494)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-26 15:00:26,058 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-03-26 15:00:26,760 [Worker-7: Decoration Calculation] WARN  org.eclipse.jgit.util.FS - Cannot run program "\usr\bin\git" (in directory "\usr\bin"): CreateProcess error=2, 系统找不到指定的文件。

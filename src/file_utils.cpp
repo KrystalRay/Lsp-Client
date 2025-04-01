@@ -37,5 +37,16 @@ std::string FileUtils::normalizePath(const std::string& path) {
 
 std::string FileUtils::pathToUri(const std::string& path) {
     std::string normalized = normalizePath(path);
+    
+    // 确保路径以 / 开头
+    if (!normalized.empty() && normalized[0] != '/') {
+        normalized = '/' + normalized;
+    }
+    
+    // 检查是否已经是 URI 格式
+    if (normalized.find("file://") == 0) {
+        return normalized;
+    }
+    
     return "file://" + normalized;
 }

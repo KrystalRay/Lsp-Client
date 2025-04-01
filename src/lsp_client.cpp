@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <thread>
 #include <chrono>
+#include <cstring> // For memcpy
 
 #ifdef _WIN32
 #include <windows.h>
@@ -12,6 +13,11 @@
 #include <io.h>
 #else
 #include <unistd.h>
+// Add network-related headers for Linux
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
 #endif
 
 LSPClient::LSPClient() : requestId(1), serverIn(nullptr), serverOut(nullptr) {}
@@ -19,7 +25,6 @@ LSPClient::LSPClient() : requestId(1), serverIn(nullptr), serverOut(nullptr) {}
 LSPClient::~LSPClient() {
     shutdown();
 }
-
 bool LSPClient::initialize(const std::string& serverPath) {
 #ifdef _WIN32
     SECURITY_ATTRIBUTES sa;
@@ -126,7 +131,7 @@ bool LSPClient::initialize(const std::string& serverPath) {
 
     // 打开一个Java文件进行分析
     std::string filePath = "/mnt/d/Course/Year4/QLextension/DemoProject-master/src/main/java/tutorial1/Main.java";
-    std::string srcPath = "/mnt/d/Course/Year4/QLextension/DemoProject-master/src/main/java";
+    std::string srcPath = "/mnt/d/Course/Year4/QLextension/DemoProject-master/src";
     std::string rootPath = "/mnt/d/Course/Year4/QLextension/DemoProject-master";
     
     // 使用标准URI转换
@@ -162,21 +167,21 @@ bool LSPClient::initialize(const std::string& serverPath) {
             }}
         }},
         // 其他参数保持不变
-        {"initializationOptions", {
-            {"java", {
-                {"sourcePaths", json::array({FileUtils::pathToUri(srcPath)})},
-                {"project", {
-                    {"type", "maven"},
-                    {"buildFile", FileUtils::pathToUri(rootPath + "/pom.xml")}
-                }},
-                {"analysis", {
-                    {"mavenHome", "/home/user/.m2"},
-                    {"dependencyResolution", {
-                        {"mode", "hybrid"}
-                    }}
-                }}
-            }}
-        }}
+        // {"initializationOptions", {
+        //     {"java", {
+        //         {"sourcePaths", json::array({FileUtils::pathToUri(srcPath)})},
+        //         {"project", {
+        //             {"type", "maven"},
+        //             {"buildFile", FileUtils::pathToUri(rootPath + "/pom.xml")}
+        //         }},
+        //         {"analysis", {
+        //             {"mavenHome", "/home/user/.m2"},
+        //             {"dependencyResolution", {
+        //                 {"mode", "hybrid"}
+        //             }}
+        //         }}
+        //     }}
+        // }}
     };
 
     // 发送初始化请求并等待响应
@@ -193,7 +198,10 @@ bool LSPClient::initialize(const std::string& serverPath) {
     
     // 发送initialized通知
     sendNotification("initialized", json::object());
-    
+        
+    // 启动消息监听器
+    startMessageListener();
+
     return true;
 }
 
@@ -299,6 +307,12 @@ std::vector<json> LSPClient::getDiagnostics(const std::string& uri) {
 
 void LSPClient::shutdown() {
     if (serverIn && serverOut) {
+        // 先停止监听线程
+        isRunning = false;
+        
+        // 给线程一点时间退出
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+        
         // 发送shutdown请求
         sendRequest("shutdown", json::object());
         
@@ -309,6 +323,8 @@ void LSPClient::shutdown() {
         fclose(serverOut);
         serverIn = nullptr;
         serverOut = nullptr;
+        
+        std::cout << "LSP客户端已关闭" << std::endl;
     }
 }
 
@@ -385,10 +401,189 @@ void LSPClient::updateDiagnostics(const std::string& uri, const json& diagnostic
 
 
 json LSPClient::requestSourceName() {
-    // 不直接请求source方法，而是使用一个自定义方法来获取通知
     json params = {
-        {"command", "getSourceName"}
+        {"command", "getAnalyzerSource"},
+        {"arguments", json::array()}
     };
     return sendRequest("workspace/executeCommand", params);
+}
+
+json LSPClient::executeCommand(const std::string& command) {
+    json params = {
+        {"command", command}
+    };
+    return sendRequest("workspace/executeCommand", params);
+}
+
+// 处理服务器消息
+void LSPClient::processServerMessages(int timeoutMs) {
+    json message = readMessage(timeoutMs);
+    
+    if (!message.empty()) {
+        // 输出接收到的消息（调试用）
+        std::cout << "服务器原始消息: " << message.dump(2) << std::endl;
+        
+        // 处理不同类型的消息
+        if (message.contains("method")) {
+            std::string method = message["method"];
+            
+            // 处理诊断信息
+            if (method == "textDocument/publishDiagnostics" && message.contains("params")) {
+                json params = message["params"];
+                if (params.contains("uri") && params.contains("diagnostics")) {
+                    std::string uri = params["uri"];
+                    json diagArray = params["diagnostics"];
+                    
+                    // 更新诊断信息
+                    diagnostics[uri] = diagArray;
+                    
+                    std::cout << "收到诊断信息: " << uri << " 包含 " 
+                              << diagArray.size() << " 个问题" << std::endl;
+                }
+            }
+            // 处理服务器消息
+            else if (method == "window/showMessage" && message.contains("params")) {
+                json params = message["params"];
+                if (params.contains("message")) {
+                    std::string msg = params["message"];
+                    int type = params.value("type", 1);
+                    
+                    std::cout << "服务器消息 [" << type << "]: " << msg << std::endl;
+                }
+            }
+            // 可以添加更多消息类型的处理...
+        }
+        // 处理响应消息
+        else if (message.contains("id") && message.contains("result")) {
+            // 这里处理请求的响应
+            std::cout << "收到请求响应，ID: " << message["id"] << std::endl;
+        }
+    }
+}
+
+// 启动消息监听线程
+void LSPClient::startMessageListener() {
+    isRunning = true; // 设置运行标志
+    // 创建一个后台线程来监听消息
+    std::thread([this]() {
+        std::cout << "开始监听服务器日志..." << std::endl;
+        while (isRunning && serverIn != nullptr && isRunning) {  // 检查运行标志
+            this->processServerMessages(100);  // 100ms超时
+            std::this_thread::sleep_for(std::chrono::milliseconds(50));
+        }
+        std::cout << "服务器日志监听线程已退出" << std::endl;
+    }).detach();  
+}
+
+bool LSPClient::connectToServer(const std::string& host, int port) {
+    // 创建socket
+    int sock = socket(AF_INET, SOCK_STREAM, 0);
+    if (sock < 0) {
+        std::cerr << "创建socket失败" << std::endl;
+        return false;
+    }
+
+    struct sockaddr_in serverAddr;
+    serverAddr.sin_family = AF_INET;
+    serverAddr.sin_port = htons(port);
+    
+    // 解析主机名或IP地址
+    struct hostent* server = gethostbyname(host.c_str());
+    if (server == nullptr) {
+        std::cerr << "无法解析服务器地址: " << host << std::endl;
+        close(sock);
+        return false;
+    }
+    
+    memcpy(&serverAddr.sin_addr.s_addr, server->h_addr, server->h_length);
+
+    // 连接到服务器
+    if (connect(sock, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) < 0) {
+        std::cerr << "连接服务器失败: " << host << ":" << port << std::endl;
+        close(sock);
+        return false;
+    }
+
+    // 将socket转换为FILE*以便使用现有代码
+    serverIn = fdopen(sock, "r");
+    serverOut = fdopen(dup(sock), "w");
+    
+    if (!serverIn || !serverOut) {
+        std::cerr << "打开服务器连接失败" << std::endl;
+        if (serverIn) fclose(serverIn);
+        if (serverOut) fclose(serverOut);
+        close(sock);
+        return false;
+    }
+
+    // 打开一个Java文件进行分析
+    std::string filePath = "/mnt/d/Course/Year4/QLextension/DemoProject-master/src/main/java/tutorial1/Main.java";
+    std::string srcPath = "/mnt/d/Course/Year4/QLextension/DemoProject-master/src";
+    std::string rootPath = "/mnt/d/Course/Year4/QLextension/DemoProject-master";
+    
+    // 使用标准URI转换
+    std::string fileUri = FileUtils::pathToUri(filePath);
+    std::string rootUri = FileUtils::pathToUri(rootPath);
+
+    // 发送初始化请求 - 与initialize方法保持一致
+    json initParams = {
+        {"processId", ::getpid()},
+        {"clientInfo", {
+            {"name", "C++ Client"},
+            {"version", "1.0"}
+        }},
+        {"rootUri", rootUri},
+        {"workspaceFolders", json::array({
+            {{"uri", rootUri}, {"name", "DemoProject"}}
+        })},
+        {"capabilities", {
+            {"workspace", {
+                {"configuration", true},
+                {"workspaceFolders", true},
+                {"didChangeConfiguration", {
+                    {"dynamicRegistration", true}
+                }}
+            }},
+            {"textDocument", {
+                {"synchronization", {
+                    {"didSave", true},
+                    {"dynamicRegistration", true}
+                }},
+                {"diagnostics", {"relatedInformation", true}}
+            }}
+        }}
+    };
+
+    // 发送初始化请求并等待响应
+    json response = sendRequest("initialize", initParams);
+    
+    // 检查响应是否有效
+    if (response.empty() || (response.contains("error") && !response["error"].is_null())) {
+        std::cerr << "初始化失败: " << response.dump(2) << std::endl;
+        return false;
+    }
+    
+    // 等待一小段时间再发送initialized通知
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+    
+    // 发送initialized通知
+    sendNotification("initialized", json::object());
+    
+    // 启动消息监听器
+    startMessageListener();
+    
+    return true;
+}
+
+// 添加心跳机制
+void LSPClient::startHeartbeat() {
+    std::thread([this]() {
+        while (isRunning && serverIn != nullptr && serverOut != nullptr) {
+            // 每30秒发送一次ping请求
+            json pingParams = {};
+            sendNotification("$/ping", pingParams);
+            std::this_thread::sleep_for(std::chrono::seconds(30));
+        }
+    }).detach();
 }
 
