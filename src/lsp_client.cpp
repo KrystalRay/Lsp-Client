@@ -246,7 +246,10 @@ json LSPClient::readResponse() {
     }
     
     if (contentLength <= 0) {
+      // 如果客户端正在关闭，不输出错误信息
+      if (isRunning) {
         std::cerr << "无效的 Content-Length 或未找到" << std::endl;
+    }
         return json::object();
     }
     
@@ -258,7 +261,10 @@ json LSPClient::readResponse() {
     try {
         return json::parse(buffer.data());
     } catch (const std::exception& e) {
-        std::cerr << "解析响应失败: " << e.what() << std::endl;
+        // 如果客户端正在关闭，不输出错误信息
+        if (isRunning) {
+            std::cerr << "解析响应失败: " << e.what() << std::endl;
+        }
         return json::object();
     }
 }
@@ -313,17 +319,31 @@ void LSPClient::shutdown() {
         // 给线程一点时间退出
         std::this_thread::sleep_for(std::chrono::milliseconds(200));
         
-        // 发送shutdown请求
-        sendRequest("shutdown", json::object());
+        // // 发送shutdown请求 这是告知服务器Client已经退出
+        // sendRequest("shutdown", json::object());
+
+        // 发送shutdown请求 这是告知服务器Client已经退出
+        json response = sendRequest("shutdown", json::object());
+        std::cout << "服务器响应shutdown请求: " << response.dump(2) << std::endl;
         
-        // 发送exit通知
-        sendNotification("exit", json::object());
+        // 发送exit通知 这是告知Server退出的指令
+        // sendNotification("exit", json::object());
         
+        // 再次确认监听线程已退出
+        std::cout << "等待监听线程退出..." << std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+
+        // 获取文件描述符以便正确关闭
+        int inFd = fileno(serverIn);
+        int outFd = fileno(serverOut);
+        
+        // 关闭文件流
         fclose(serverIn);
         fclose(serverOut);
         serverIn = nullptr;
         serverOut = nullptr;
-        
+        close(inFd);
+        close(outFd);
         std::cout << "LSP客户端已关闭" << std::endl;
     }
 }
@@ -467,7 +487,7 @@ void LSPClient::startMessageListener() {
     // 创建一个后台线程来监听消息
     std::thread([this]() {
         std::cout << "开始监听服务器日志..." << std::endl;
-        while (isRunning && serverIn != nullptr && isRunning) {  // 检查运行标志
+        while (isRunning && serverIn != nullptr) {  // 检查运行标志
             this->processServerMessages(100);  // 100ms超时
             std::this_thread::sleep_for(std::chrono::milliseconds(50));
         }

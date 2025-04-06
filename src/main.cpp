@@ -83,8 +83,12 @@ int main() {
     // 移除重复的消息监听代码，因为LSPClient已经在initialize中启动了监听线程
     std::cout << "等待分析结果..." << std::endl;
     
+    std::cout << "检查Java版本:" << std::endl;
+    json javaVersionResult = client.executeCommand("getJavaVersion");
+    std::cout << "Java版本检查结果: " << javaVersionResult.dump(2) << std::endl;
+
     // 简化等待逻辑，只需等待一段时间让分析完成
-    int waitTimeSeconds = 15; // 等待15秒
+    int waitTimeSeconds = 10; // 等待15秒
     for (int i = 0; i < waitTimeSeconds; i++) {
         // 检查是否已经收到诊断信息
         auto diagnostics = client.getDiagnostics(fileUri);
@@ -107,9 +111,7 @@ int main() {
         std::cout << "诊断: " << diag.dump(2) << std::endl;
     }
      
-    // 测试1：获取分析器名称
-    json sourceName = client.requestSourceName();
-    std::cout << "分析器名称: " << sourceName.dump(2) << std::endl;
+    client.executeCommand("echo \"Hello World!\"");
 
     // 关闭连接
     client.shutdown();
