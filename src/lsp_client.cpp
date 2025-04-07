@@ -234,9 +234,10 @@ json LSPClient::sendRequest(const std::string& method, const json& params) {
 json LSPClient::readResponse() {
     char header[1024];
     int contentLength = -1;
-    
+
     // 读取头部，查找 Content-Length
     while (fgets(header, sizeof(header), serverIn)) {
+        std::cout << "Receive the header info: " << header;
         if (strncmp(header, "Content-Length: ", 16) == 0) {
             contentLength = atoi(header + 16);
         } else if (strcmp(header, "\r\n") == 0) {
@@ -347,6 +348,11 @@ void LSPClient::shutdown() {
         std::cout << "LSP客户端已关闭" << std::endl;
     }
 }
+void LSPClient::serverExit(){
+    sendNotification("exit", json::object());
+}
+
+
 
 void LSPClient::documentDidChange(const std::string& uri, const std::string& newContent, int version) {
     json params = {

@@ -67,6 +67,9 @@ public:
 
     // 关闭连接
     void shutdown();
+    
+    // 退出服务器守护进程
+    void serverExit();
 
     void startHeartbeat();
 private:

@@ -16,7 +16,7 @@ int main() {
     LSPClient client;
     
     // 连接到已运行的服务器
-    std::string serverHost = "localhost"; // 或者使用实际的服务器IP
+    std::string serverHost = "localhost"; 
     int serverPort = 9090;
     
     std::cout << "正在尝试连接到服务器: " << serverHost << ":" << serverPort << std::endl;
@@ -71,8 +71,6 @@ int main() {
     // 在初始化后添加Maven项目验证
     std::string mvnCmd = "mvn -f \"" + rootPath + "/pom.xml\" validate";
     std::system(mvnCmd.c_str());
-
-
     
     // 等待一段时间，确保服务器处理配置
     std::this_thread::sleep_for(std::chrono::seconds(2));
@@ -80,15 +78,13 @@ int main() {
     // 打开文档并等待分析
     client.openDocument(fileUri, fileContent, "java");
     
-    // 移除重复的消息监听代码，因为LSPClient已经在initialize中启动了监听线程
     std::cout << "等待分析结果..." << std::endl;
     
-    std::cout << "检查Java版本:" << std::endl;
-    json javaVersionResult = client.executeCommand("getJavaVersion");
-    std::cout << "Java版本检查结果: " << javaVersionResult.dump(2) << std::endl;
+    // std::cout << "检查Java版本:" << std::endl;
+    // json javaVersionResult = client.executeCommand("getJavaVersion");
+    // std::cout << "Java版本检查结果: " << javaVersionResult.dump(2) << std::endl;
 
-    // 简化等待逻辑，只需等待一段时间让分析完成
-    int waitTimeSeconds = 10; // 等待15秒
+    int waitTimeSeconds = 5; 
     for (int i = 0; i < waitTimeSeconds; i++) {
         // 检查是否已经收到诊断信息
         auto diagnostics = client.getDiagnostics(fileUri);
