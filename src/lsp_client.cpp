@@ -166,22 +166,6 @@ bool LSPClient::initialize(const std::string& serverPath) {
                 {"diagnostics", {"relatedInformation", true}}
             }}
         }},
-        // 其他参数保持不变
-        // {"initializationOptions", {
-        //     {"java", {
-        //         {"sourcePaths", json::array({FileUtils::pathToUri(srcPath)})},
-        //         {"project", {
-        //             {"type", "maven"},
-        //             {"buildFile", FileUtils::pathToUri(rootPath + "/pom.xml")}
-        //         }},
-        //         {"analysis", {
-        //             {"mavenHome", "/home/user/.m2"},
-        //             {"dependencyResolution", {
-        //                 {"mode", "hybrid"}
-        //             }}
-        //         }}
-        //     }}
-        // }}
     };
 
     // 发送初始化请求并等待响应
@@ -234,37 +218,53 @@ json LSPClient::sendRequest(const std::string& method, const json& params) {
 json LSPClient::readResponse() {
     char header[1024];
     int contentLength = -1;
+    bool headerEnd = false;
+
+    // 清空缓冲区
+    memset(header, 0, sizeof(header));
 
     // 读取头部，查找 Content-Length
     while (fgets(header, sizeof(header), serverIn)) {
-        std::cout << "Receive the header info: " << header;
+        if (strlen(header) == 0) {
+            continue; // 跳过空行
+        }
+
         if (strncmp(header, "Content-Length: ", 16) == 0) {
             contentLength = atoi(header + 16);
-        } else if (strcmp(header, "\r\n") == 0) {
-            // 头部结束
+        } else if (strcmp(header, "\r\n") == 0 || strcmp(header, "\n") == 0) {
+            headerEnd = true;
             break;
         }
+        
+        memset(header, 0, sizeof(header)); // 清空缓冲区
     }
-    
-    if (contentLength <= 0) {
-      // 如果客户端正在关闭，不输出错误信息
-      if (isRunning) {
-        std::cerr << "无效的 Content-Length 或未找到" << std::endl;
-    }
+
+    if (!headerEnd || contentLength <= 0) {
+        if (isRunning) {
+            std::cerr << "无效的响应头或未找到Content-Length" << std::endl;
+        }
         return json::object();
     }
-    
+
     // 读取消息内容
     std::vector<char> buffer(contentLength + 1);
     size_t bytesRead = fread(buffer.data(), 1, contentLength, serverIn);
+    
+    if (bytesRead != contentLength) {
+        if (isRunning) {
+            std::cerr << "读取数据不完整: " << bytesRead << "/" << contentLength << std::endl;
+        }
+        return json::object();
+    }
+    
     buffer[bytesRead] = '\0';
     
     try {
         return json::parse(buffer.data());
     } catch (const std::exception& e) {
-        // 如果客户端正在关闭，不输出错误信息
         if (isRunning) {
             std::cerr << "解析响应失败: " << e.what() << std::endl;
+            std::cerr << "原始数据: " << buffer.data() << std::endl;
         }
         return json::object();
     }
@@ -322,8 +322,6 @@ void LSPClient::shutdown() {
         
         // // 发送shutdown请求 这是告知服务器Client已经退出
         // sendRequest("shutdown", json::object());
-
-        // 发送shutdown请求 这是告知服务器Client已经退出
         json response = sendRequest("shutdown", json::object());
         std::cout << "服务器响应shutdown请求: " << response.dump(2) << std::endl;
         
@@ -348,8 +346,27 @@ void LSPClient::shutdown() {
         std::cout << "LSP客户端已关闭" << std::endl;
     }
 }
-void LSPClient::serverExit(){
-    sendNotification("exit", json::object());
+void LSPClient::exitServer() {
+    if (serverIn && serverOut) {
+        // 先停止监听线程
+        isRunning = false;
+        
+        // 发送shutdown请求
+        json response = sendRequest("shutdown", json::object());
+        std::cout << "服务器响应shutdown请求: " << response.dump(2) << std::endl;
+        
+        // 等待服务器处理
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        
+        // 发送exit通知
+        sendNotification("exit", json::object());
+        
+        // 等待更长时间确保服务器处理完成
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        
+        // 关闭连接
+        shutdown();
+    }
 }
 
 
