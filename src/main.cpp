@@ -66,6 +66,15 @@ int main() {
         }}
     });
 
+    // 在连接成功后发送配置
+    nlohmann::json config = {
+        {"wukong", {
+            {"classpath", "/app/tests/qltests/java/advennet/"}
+        }}
+    };
+    client.sendNotification("workspace/didChangeConfiguration", {
+        {"settings", config}
+    });
 
     
     // 在初始化后添加Maven项目验证
@@ -115,7 +124,7 @@ int main() {
     // 添加强制退出代码
     std::cout << "程序即将退出..." << std::endl;
     std::this_thread::sleep_for(std::chrono::seconds(1)); // 给一点时间让消息打印出来
-    exit(0); // 强制退出程序
+    // exit(0); // 强制退出程序
     
     return 0;
 }
