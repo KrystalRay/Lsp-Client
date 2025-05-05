@@ -10,14 +10,15 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
+#include <ctime> // 新增头文件
 
 int main() {
     // 创建LSP客户端
     LSPClient client;
     
     // 连接到已运行的服务器
-    std::string serverHost = "localhost"; 
-    int serverPort = 9090;
+    std::string serverHost = "172.19.112.1"; 
+    int serverPort = 8080;
     
     std::cout << "正在尝试连接到服务器: " << serverHost << ":" << serverPort << std::endl;
     
@@ -66,12 +67,20 @@ int main() {
         }}
     });
 
+    // 记录发送wukong配置的起始时间
+    auto analysisStart = std::chrono::steady_clock::now();
+
     // 在连接成功后发送配置
     nlohmann::json config = {
         {"wukong", {
-            {"classpath", "/app/tests/qltests/java/advennet/"}
+            {"classpath", "/app/tests/qltests/java/advennet/"},
+            // {"targetPath", "D:/Course/Year4/BS/examples/test/cwe089/semmle/tests"},
+            // {"sourcesinkPath", "D:/Course/Year4/QLextension/Json/CWE-089-hiveMetaData.json"}
+            {"targetPath", "D:/Course/Year4/BS/examples"},
+            {"sourcesinkPath", "D:/Course/Year4/QLextension/Json/CWE-89-QL.json"}
         }}
     };
+
     client.sendNotification("workspace/didChangeConfiguration", {
         {"settings", config}
     });
@@ -88,10 +97,6 @@ int main() {
     client.openDocument(fileUri, fileContent, "java");
     
     std::cout << "等待分析结果..." << std::endl;
-    
-    // std::cout << "检查Java版本:" << std::endl;
-    // json javaVersionResult = client.executeCommand("getJavaVersion");
-    // std::cout << "Java版本检查结果: " << javaVersionResult.dump(2) << std::endl;
 
     int waitTimeSeconds = 5; 
     for (int i = 0; i < waitTimeSeconds; i++) {
@@ -105,6 +110,11 @@ int main() {
         std::cout << "已等待 " << (i+1) << " 秒" << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
+
+    // 记录分析完成时间
+    auto analysisEnd = std::chrono::steady_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(analysisEnd - analysisStart).count();
+    std::cout << "分析耗时: " << duration << " ms" << std::endl;
 
     std::cout << "Finish  Analysis" << std::endl;
     
